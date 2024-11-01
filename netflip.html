@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie flix</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: #fff;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #141414;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo img {
+            width: 100px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 5rem 2rem 2rem;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        .hero p {
+            margin: 1rem 0;
+        }
+        .hero a {
+            padding: 0.5rem 1rem;
+            background-color: red;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        .content {
+            margin-bottom: 2rem;
+        }
+        .content h2 {
+            margin-bottom: 1rem;
+        }
+        .movie-grid {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .movie-item {
+            flex: 1 1 calc(25% - 1rem);
+            margin-bottom: 1rem;
+        }
+        .movie-item a {
+            display: block;
+        }
+        .movie-grids {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .movie-items {
+            flex: 1 1 calc(25% - 1rem);
+            margin-bottom: 1rem;
+        }
+        .movie-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #141414;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT314orP3UA2WsdfMoBtBnHsMezhJn4u8SVFw&s" alt="Netflix Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="trending.html">Trending</a></li>
+                <li><a href="#tvshows">TV Shows</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#new">New & Popular</a></li>
+                <li><a href="#hello"> patti</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Featured Movie</h1>
+            <p>Description of the featured movie or show.</p>
+            <a href="#upcoming">Watch Now</a>
+        </section>
+        <section class="content">
+            <h2>Popular on movieflix</h2>
+            <div class="movie-grid">
+                <div class="movie-item">
+                    <a href="https://www.netflix.com/in/title/80057281">
+                        <img src="https://occ-0-8407-116.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZHclp-1JynUWnj9GdlOIvdYHUxD_rBSmk_Q53L_xPrPHOrv9tobzVvkBJCOshIp4P0hDc_3Zus-1ACtLZjGd0GF682Bf46iZQXVIk4hwY1mWsSG_9enpVAi_qNn08Nr-kAT2A.jpg?r=c68" alt="Movie 1">
+                    </a>
+                    <h3>Movie 1</h3>
+                </div>
+                <div class="movie-item">
+                    <a href="https://www.netflix.com/in/title/80057281">
+                        <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/04/stranger-things-cartoon.jpg" alt="Movie 2">
+                    </a>
+                    <h3>Movie 2</h3>
+                </div>
+            </div>
+            <div class="movie-grid">
+                <div class="movie-item">
+                    <a href="https://www.netflix.com/in/title/80100172">
+                    <img src="https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/xtcyo6jblfnqv2dlkfnr.jpg" alt="Movie 1">
+                    </a>
+                    <h3>Movie 3</h3>
+                </div>
+                <div class="movie-item">
+                    <a href="https://www.netflix.com/in/title/80100172">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGIaiZKqP66NE46G8O0JAoCU-4vNpiRdBnVg&s"   alt="Movie 2">
+                    </a>
+                    <br><h3>Movie 4</h3>
+                </div>
+            </div>
+        </section>
+        <section id="upcoming" class="content">
+            <h2>UPCOMING...</h2>
+            <div class="movie-grids">
+                <div class="movie-items">
+                    <a href="https://www.netflix.com/in/title/80100172">
+                        <img src="https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYooBTHs4N3UkCepoM76TAfw7YkFKO37GzRzyticAbdjKNHKkfnkDFc9riKg78FkOzlWCjZp_WTRg2n8HaEiYyIzAK453YTVWl-u.jpg?r=077" alt="Movie 5">
+                    </a>
+                    <h3>Movie 5</h3>
+                </div>
+                <div class="movie-items">
+                    <a href="https://www.netflix.com/ph/title/70299043">
+                        <img src="https://www.pointnthink.fr/wp-content/uploads/2023/11/essai-snk_4.png" alt="Movie 6">
+                    </a>
+                    <h3>Movie 6</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023  movieflix. All rights

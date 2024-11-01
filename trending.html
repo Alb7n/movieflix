@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending - Top 5 Films</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: #fff;
+        }
+        header {
+            background-color: #6c151d;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem 0;
+        }
+        .movie-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .movie-item {
+            flex: 1 1 30%;
+            margin: 10px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+        .movie-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #6c0b0b;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Trending - Top 5 Films</h1>
+    <nav>
+        <ul>
+            <li><a href="netflip.html">Home</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+<section id="trending">
+    <h2>Top 5 Trending Films</h2>
+    <div class="movie-grid">
+        <div class="movie-item">
+            <a href="film1.html">
+                <img src="https://example.com/film1.jpg" alt="Film 1">
+                <h3>Film 1</h3>
+                <p>description .</p>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="film2.html">
+                <img src="https://example.com/film2.jpg" alt="Film 2">
+                <h3>Film 2</h3>
+                <p>description</p>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="film3.html">
+                <img src="https://example.com/film3.jpg" alt="Film 3">
+                <h3>Film 3</h3>
+                <p>description</p>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="film4.html">
+                <img src="https://example.com/film4.jpg" alt="Film 4">
+                <h3>Film 4</h3>
+                <p>description</p>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="film5.html">
+                <img src="https://example.com/film5.jpg" alt="Film 5">
+                <h3>Film 5</h3>
+                <p>A brief description of Film 5.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 Netflix Clone. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
