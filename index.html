@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b12">
+  <meta name="description" content="Discover movies, explore what's trending, and build your personal watchlist with MovieFlix.">
+  <title>MovieFlix — Find your next favourite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="MovieFlix home"><span class="brand-mark">M</span><span>movie<span class="brand-accent">flix</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a><a class="nav-link" href="#trending">Discover</a><a class="nav-link" href="#watchlist">My Watchlist <span class="watch-count" id="watchCount">0</span></a>
+    </nav>
+    <a class="header-cta" href="#trending">Explore movies <span>↗</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> YOUR NEXT MOVIE NIGHT STARTS HERE</p>
+        <h1>Stories worth<br><span class="gradient-text">staying in for.</span></h1>
+        <p class="hero-description">Explore standout films, find something new, and keep your favourites in one place.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#trending">Discover movies <span>→</span></a><a class="button button-ghost" href="#watchlist">View watchlist</a></div>
+        <div class="hero-meta"><div class="avatar-stack"><span>✦</span><span>▶</span><span>★</span></div><p><strong>Your personal cinema guide</strong><br><span>Curated picks. Your own watchlist.</span></p></div>
+      </div>
+      <div class="hero-art" aria-label="Cinema-inspired artwork">
+        <div class="poster poster-back"><span class="poster-kicker">A WORLD BEYOND</span><strong>THE<br>UNKNOWN</strong><small>SCI-FI · ADVENTURE</small></div>
+        <div class="poster poster-front"><span class="poster-kicker">FEATURED COLLECTION</span><strong>THE<br>LAST<br>FRAME</strong><small>TONIGHT'S FEATURE</small></div>
+        <div class="floating-note"><span class="note-icon">✦</span><span><strong>Find your next favourite</strong><small>One great film at a time</small></span></div>
+        <div class="art-orbit"></div>
+      </div>
+    </section>
+
+    <section class="search-section" aria-label="Search movies">
+      <div><p class="eyebrow">THE MOVIE LIBRARY</p><h2>What are you in the mood for?</h2></div>
+      <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search titles, genres, or moods..." autocomplete="off"><kbd>⌕</kbd></label>
+    </section>
+
+    <section class="section-block" id="trending">
+      <div class="section-heading"><div><p class="eyebrow">HAND-PICKED FOR YOU</p><h2>Trending <span class="heading-muted">right now</span></h2></div><span class="section-caption">A few stories to get you started</span></div>
+      <div class="filter-row" id="filterRow" aria-label="Filter by genre">
+        <button class="filter-chip selected" data-genre="All">All movies</button>
+        <button class="filter-chip" data-genre="Action">Action</button><button class="filter-chip" data-genre="Drama">Drama</button><button class="filter-chip" data-genre="Sci-Fi">Sci-Fi</button><button class="filter-chip" data-genre="Thriller">Thriller</button><button class="filter-chip" data-genre="Animation">Animation</button>
+      </div>
+      <div class="movie-grid" id="movieGrid" aria-live="polite"></div>
+      <p class="empty-state hidden" id="emptyState">No movies match that search. Try another title or genre.</p>
+    </section>
+
+    <section class="watchlist-section" id="watchlist">
+      <div class="section-heading"><div><p class="eyebrow">SAVED FOR LATER</p><h2>Your watchlist <span class="heading-muted">collection</span></h2></div><span class="section-caption">Saved on this device</span></div>
+      <div class="watchlist-content" id="watchlistContent"><div class="watchlist-empty"><span>＋</span><div><strong>Your list is waiting</strong><p>Save a movie with the bookmark button and it will appear here.</p></div><a href="#trending">Browse movies →</a></div></div>
+    </section>
+
+    <section class="bottom-banner"><div><p class="eyebrow">A BETTER WAY TO PICK A FILM</p><h2>Less scrolling.<br><span class="gradient-text">More watching.</span></h2></div><a class="button button-primary" href="#trending">Find a movie <span>→</span></a><div class="banner-star">✳</div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">M</span><span>movie<span class="brand-accent">flix</span></span></a><div class="credits" id="credits"><a href="https://www.themoviedb.org/" target="_blank" rel="noreferrer"><img class="tmdb-logo" src="https://www.themoviedb.org/assets/2/v4/logos/stacked-green.svg" alt="The Movie Database (TMDB)"></a><p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p><p>MovieFlix is an independent discovery demo and does not stream movies.</p></div><a href="#home" class="back-top">Back to top ↑</a></footer>
+
+  <dialog class="movie-dialog" id="movieDialog" aria-labelledby="dialogTitle"><button class="dialog-close" id="dialogClose" aria-label="Close details">×</button><div id="dialogContent"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
