@@ -12,7 +12,7 @@ A responsive movie discovery application built with vanilla HTML, CSS, and JavaS
 - Demo catalogue fallback when the API is not configured or unavailable
 
 ## Deploy with Vercel
-1. Import this GitHub repository into Vercel.
+1. Import this repository into Vercel.
 2. Set the project root to the repository root.
 3. In Vercel, open **Project Settings → Environment Variables**.
 4. Add `TMDB_BEARER_TOKEN` with your TMDB **API Read Access Token** (the long bearer token, not the short v3 API key).
